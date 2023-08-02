@@ -1,0 +1,10 @@
+21:25:48 **** Incremental Build of configuration Debug for project SerialCommunicationControls ****
+make -j3 all 
+arm-none-eabi-size   SerialCommunicationControls.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32236	     20	   1716	  33972	   84b4	SerialCommunicationControls.elf
+Finished building: default.size.stdout
+ 
+
+21:25:49 Build Finished. 0 errors, 0 warnings. (took 239ms)
+
