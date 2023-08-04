@@ -94,7 +94,8 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  uint8_t receivedMessage[2];
+  char message[] = "Hello, world.\n";
+  uint8_t receivedData[2];
 
   /* USER CODE END 2 */
 
@@ -102,21 +103,22 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_UART_Receive(&huart3, receivedMessage, 2, HAL_MAX_DELAY);
-
-	  //HAL_UART_Transmit(&huart3, (uint8_t *)receivedMessage, 2, 100);
+	  HAL_UART_Receive(&huart3, receivedData, 2, HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart3, receivedData, 2, 100);
+//	  HAL_UART_Transmit(&huart3, (uint8_t *)message, strlen(message), 100);b
 
 	  GPIO_PinState state = GPIO_PIN_SET;
 
-	  if (receivedMessage[1] == "0")
+	  if (receivedData[1] == '0')
 		  state = GPIO_PIN_RESET;
 
-	  if (receivedMessage[0] == "R")
+	  if (receivedData[0] == 'R')
 		  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, state);
-	  else if (receivedMessage[0] == "Y")
+	  else if (receivedData[0] == 'Y')
 		  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, state);
-	  else if (receivedMessage[0] == "G")
+	  else if (receivedData[0] == 'G')
 		  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, state);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

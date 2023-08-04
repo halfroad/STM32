@@ -1,0 +1,10 @@
+14:57:20 **** Incremental Build of configuration Debug for project DirectMemoryAccess ****
+make -j3 all 
+arm-none-eabi-size   DirectMemoryAccess.elf 
+   text	   data	    bss	    dec	    hex	filename
+  39620	     20	   1964	  41604	   a284	DirectMemoryAccess.elf
+Finished building: default.size.stdout
+ 
+
+14:57:20 Build Finished. 0 errors, 0 warnings. (took 266ms)
+
