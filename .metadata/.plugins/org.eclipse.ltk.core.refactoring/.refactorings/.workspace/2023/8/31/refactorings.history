@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;SerialCommunications&apos; to &apos;SerialCommunicationsPrint&apos;" description="Rename resource &apos;SerialCommunications&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SerialCommunications" name="SerialCommunicationsPrint" stamp="1690977391394" updateReferences="true"/>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SerialCommunications&apos; to &apos;SerialCommunicationsPrint&apos;" description="Rename resource &apos;SerialCommunications&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SerialCommunications" name="SerialCommunicationsPrint" stamp="1690977391394" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;Talk2Arduino&apos;" deleteContents="true" description="Delete resource &apos;Talk2Arduino&apos;" element1="/Talk2Arduino" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1691212138219"/>
 </session>
