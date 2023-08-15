@@ -1,10 +1,10 @@
-00:46:39 **** Incremental Build of configuration Debug for project AmbientSensors ****
+23:35:05 **** Incremental Build of configuration Debug for project AmbientSensors ****
 make -j3 all 
 arm-none-eabi-size   AmbientSensors.elf 
    text	   data	    bss	    dec	    hex	filename
-  40268	     20	   1820	  42108	   a47c	AmbientSensors.elf
+  58528	    476	   2140	  61144	   eed8	AmbientSensors.elf
 Finished building: default.size.stdout
  
 
-00:46:39 Build Finished. 0 errors, 0 warnings. (took 177ms)
+23:35:05 Build Finished. 0 errors, 0 warnings. (took 310ms)
 

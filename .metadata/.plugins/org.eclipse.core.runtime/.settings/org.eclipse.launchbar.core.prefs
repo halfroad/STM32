@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SerialCommunicationControls Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FlexibleData Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BlueTooth Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AmbientSensors Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Talk2Arduino Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BlueTooth Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FlexibleData Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Talk2Arduino Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SerialCommunicationControls Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UniversalSynchronousAsynchronousReceiverTransmitter Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AmbientSensors Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AmbientSensors\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AmbientSensors\ Debug/activeLaunchTarget=null\:---
@@ -16,3 +16,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SerialCommunications/activeLaun
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SerialCommunications/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SerialCommunicationsPrint/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SerialCommunicationsPrint/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UniversalSynchronousAsynchronousReceiverTransmitter\ Debug/activeLaunchMode=run
