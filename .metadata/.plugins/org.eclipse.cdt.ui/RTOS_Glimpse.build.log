@@ -1,0 +1,10 @@
+11:54:16 **** Incremental Build of configuration Debug for project RTOS_Glimpse ****
+make -j3 all 
+arm-none-eabi-size   RTOS_Glimpse.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5840	     20	   1572	   7432	   1d08	RTOS_Glimpse.elf
+Finished building: default.size.stdout
+ 
+
+11:54:16 Build Finished. 0 errors, 0 warnings. (took 160ms)
+

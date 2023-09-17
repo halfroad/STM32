@@ -1,0 +1,26 @@
+!SESSION 2023-09-17 12:17:01.304 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CN
+Framework arguments:  -keyring /Users/jinhui/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/jinhui/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-17 12:17:16.373
+!MESSAGE Log4j2 initialized with config file /Users/jinhui/Projects/STM32CubeIDE/STM32/RTOS/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-17 12:17:19.427
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-09-17 12:24:56.451 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CN
+Framework arguments:  -keyring /Users/jinhui/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/jinhui/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-17 12:25:07.171
+!MESSAGE Log4j2 initialized with config file /Users/jinhui/Projects/STM32CubeIDE/STM32/RTOS/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-17 12:25:10.655
+!MESSAGE Started RMI Server, listening on port 41337

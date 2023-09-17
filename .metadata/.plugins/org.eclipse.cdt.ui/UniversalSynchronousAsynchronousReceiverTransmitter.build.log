@@ -1,0 +1,10 @@
+11:33:28 **** Incremental Build of configuration Debug for project UniversalSynchronousAsynchronousReceiverTransmitter ****
+make -j3 all 
+arm-none-eabi-size   UniversalSynchronousAsynchronousReceiverTransmitter.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31984	     20	   1716	  33720	   83b8	UniversalSynchronousAsynchronousReceiverTransmitter.elf
+Finished building: default.size.stdout
+ 
+
+11:33:28 Build Finished. 0 errors, 0 warnings. (took 231ms)
+

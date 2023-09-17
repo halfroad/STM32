@@ -1,0 +1,22 @@
+22:03:13 **** Incremental Build of configuration Debug for project AT24CxxEEPROM ****
+make -j3 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:133:11: warning: implicit declaration of function 'read'; did you mean 'fread'? [-Wimplicit-function-declaration]
+  133 |           read();
+      |           ^~~~
+      |           fread
+arm-none-eabi-gcc -o "AT24CxxEEPROM.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/jinhui/Projects/STM32CubeIDE/STM32/AT24CxxEEPROM/STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AT24CxxEEPROM.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AT24CxxEEPROM.elf
+ 
+arm-none-eabi-size   AT24CxxEEPROM.elf 
+arm-none-eabi-objdump -h -S  AT24CxxEEPROM.elf  > "AT24CxxEEPROM.list"
+   text	   data	    bss	    dec	    hex	filename
+  14872	    112	   2312	  17296	   4390	AT24CxxEEPROM.elf
+Finished building: default.size.stdout
+ 
+Finished building: AT24CxxEEPROM.list
+ 
+
+22:03:15 Build Finished. 0 errors, 1 warnings. (took 1s.756ms)
+

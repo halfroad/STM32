@@ -1,0 +1,2 @@
+../Core/Src/eeprom.c:20:6:write	1
+../Core/Src/eeprom.c:36:6:read	1
