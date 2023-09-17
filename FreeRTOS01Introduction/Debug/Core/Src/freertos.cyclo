@@ -1,0 +1,3 @@
+../Core/Src/freertos.c:80:6:MX_FREERTOS_Init	1
+../Core/Src/freertos.c:125:13:task1_entry_function	1
+../Core/Src/freertos.c:143:6:task2_entry_function	1

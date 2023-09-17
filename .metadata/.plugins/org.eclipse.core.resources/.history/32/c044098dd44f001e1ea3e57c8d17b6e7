@@ -1,8 +1,0 @@
-/*
- * eeprom.c
- *
- *  Created on: Sep 10, 2023
- *      Author: jinhui
- */
-
-#include "eeprom.h"
