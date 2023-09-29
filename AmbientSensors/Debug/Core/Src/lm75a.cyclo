@@ -1,4 +1,0 @@
-../Core/Src/lm75a.c:14:12:write_byte	2
-../Core/Src/lm75a.c:28:12:read_word	2
-../Core/Src/lm75a.c:42:6:lm75a_init	1
-../Core/Src/lm75a.c:47:7:lm75a_acquire_temperature	1
