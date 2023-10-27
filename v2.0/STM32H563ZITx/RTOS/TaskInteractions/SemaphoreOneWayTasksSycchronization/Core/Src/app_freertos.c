@@ -48,27 +48,35 @@
 /* USER CODE END Variables */
 /* Definitions for FlashGreenLedTask */
 osThreadId_t FlashGreenLedTaskHandle;
-const osThreadAttr_t FlashGreenLedTask_attributes =
-{ .name = "FlashGreenLedTask", .priority = (osPriority_t) osPriorityNormal,
-		.stack_size = 128 * 4 };
+const osThreadAttr_t FlashGreenLedTask_attributes = {
+  .name = "FlashGreenLedTask",
+  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 128 * 4
+};
 /* Definitions for FlashYellowLedTask */
 osThreadId_t FlashYellowLedTaskHandle;
-const osThreadAttr_t FlashYellowLedTask_attributes =
-{ .name = "FlashYellowLedTask", .priority = (osPriority_t) osPriorityNormal,
-		.stack_size = 128 * 4 };
+const osThreadAttr_t FlashYellowLedTask_attributes = {
+  .name = "FlashYellowLedTask",
+  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 128 * 4
+};
 /* Definitions for FlashRedLedTask */
 osThreadId_t FlashRedLedTaskHandle;
-const osThreadAttr_t FlashRedLedTask_attributes =
-{ .name = "FlashRedLedTask", .priority = (osPriority_t) osPriorityNormal,
-		.stack_size = 128 * 4 };
+const osThreadAttr_t FlashRedLedTask_attributes = {
+  .name = "FlashRedLedTask",
+  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 128 * 4
+};
 /* Definitions for GreenLedEventBinarySemaphore */
 osSemaphoreId_t GreenLedEventBinarySemaphoreHandle;
-const osSemaphoreAttr_t GreenLedEventBinarySemaphore_attributes =
-{ .name = "GreenLedEventBinarySemaphore" };
+const osSemaphoreAttr_t GreenLedEventBinarySemaphore_attributes = {
+  .name = "GreenLedEventBinarySemaphore"
+};
 /* Definitions for RedLedEventBinarySemaphore */
 osSemaphoreId_t RedLedEventBinarySemaphoreHandle;
-const osSemaphoreAttr_t RedLedEventBinarySemaphore_attributes =
-{ .name = "RedLedEventBinarySemaphore" };
+const osSemaphoreAttr_t RedLedEventBinarySemaphore_attributes = {
+  .name = "RedLedEventBinarySemaphore"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -82,57 +90,51 @@ void StartFlashRedLedTask(void *argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /**
- * @brief  FreeRTOS initialization
- * @param  None
- * @retval None
- */
-void MX_FREERTOS_Init(void)
-{
-	/* USER CODE BEGIN Init */
+  * @brief  FreeRTOS initialization
+  * @param  None
+  * @retval None
+  */
+void MX_FREERTOS_Init(void) {
+  /* USER CODE BEGIN Init */
 
-	/* USER CODE END Init */
+  /* USER CODE END Init */
 
-	/* USER CODE BEGIN RTOS_MUTEX */
+  /* USER CODE BEGIN RTOS_MUTEX */
 	/* add mutexes, ... */
-	/* USER CODE END RTOS_MUTEX */
-	/* creation of GreenLedEventBinarySemaphore */
-	GreenLedEventBinarySemaphoreHandle = osSemaphoreNew(1, 1,
-			&GreenLedEventBinarySemaphore_attributes);
+  /* USER CODE END RTOS_MUTEX */
+  /* creation of GreenLedEventBinarySemaphore */
+  GreenLedEventBinarySemaphoreHandle = osSemaphoreNew(1, 1, &GreenLedEventBinarySemaphore_attributes);
 
-	/* creation of RedLedEventBinarySemaphore */
-	RedLedEventBinarySemaphoreHandle = osSemaphoreNew(1, 1,
-			&RedLedEventBinarySemaphore_attributes);
+  /* creation of RedLedEventBinarySemaphore */
+  RedLedEventBinarySemaphoreHandle = osSemaphoreNew(1, 1, &RedLedEventBinarySemaphore_attributes);
 
-	/* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
 	/* add semaphores, ... */
-	/* USER CODE END RTOS_SEMAPHORES */
+  /* USER CODE END RTOS_SEMAPHORES */
 
-	/* USER CODE BEGIN RTOS_TIMERS */
+  /* USER CODE BEGIN RTOS_TIMERS */
 	/* start timers, add new ones, ... */
-	/* USER CODE END RTOS_TIMERS */
+  /* USER CODE END RTOS_TIMERS */
 
-	/* USER CODE BEGIN RTOS_QUEUES */
+  /* USER CODE BEGIN RTOS_QUEUES */
 	/* add queues, ... */
-	/* USER CODE END RTOS_QUEUES */
-	/* creation of FlashGreenLedTask */
-	FlashGreenLedTaskHandle = osThreadNew(StartFlashGreenLedTask, NULL,
-			&FlashGreenLedTask_attributes);
+  /* USER CODE END RTOS_QUEUES */
+  /* creation of FlashGreenLedTask */
+  FlashGreenLedTaskHandle = osThreadNew(StartFlashGreenLedTask, NULL, &FlashGreenLedTask_attributes);
 
-	/* creation of FlashYellowLedTask */
-	FlashYellowLedTaskHandle = osThreadNew(StartFlashYellowLedTask, NULL,
-			&FlashYellowLedTask_attributes);
+  /* creation of FlashYellowLedTask */
+  FlashYellowLedTaskHandle = osThreadNew(StartFlashYellowLedTask, NULL, &FlashYellowLedTask_attributes);
 
-	/* creation of FlashRedLedTask */
-	FlashRedLedTaskHandle = osThreadNew(StartFlashRedLedTask, NULL,
-			&FlashRedLedTask_attributes);
+  /* creation of FlashRedLedTask */
+  FlashRedLedTaskHandle = osThreadNew(StartFlashRedLedTask, NULL, &FlashRedLedTask_attributes);
 
-	/* USER CODE BEGIN RTOS_THREADS */
+  /* USER CODE BEGIN RTOS_THREADS */
 	/* add threads, ... */
-	/* USER CODE END RTOS_THREADS */
+  /* USER CODE END RTOS_THREADS */
 
-	/* USER CODE BEGIN RTOS_EVENTS */
+  /* USER CODE BEGIN RTOS_EVENTS */
 	/* add events, ... */
-	/* USER CODE END RTOS_EVENTS */
+  /* USER CODE END RTOS_EVENTS */
 
 }
 /* USER CODE BEGIN Header_StartFlashGreenLedTask */
@@ -144,13 +146,13 @@ void MX_FREERTOS_Init(void)
 /* USER CODE END Header_StartFlashGreenLedTask */
 void StartFlashGreenLedTask(void *argument)
 {
-	/* USER CODE BEGIN FlashGreenLedTask */
+  /* USER CODE BEGIN FlashGreenLedTask */
 	/* Infinite loop */
 	for (;;)
 	{
 		osDelay(1);
 	}
-	/* USER CODE END FlashGreenLedTask */
+  /* USER CODE END FlashGreenLedTask */
 }
 
 /* USER CODE BEGIN Header_StartFlashYellowLedTask */
@@ -162,13 +164,13 @@ void StartFlashGreenLedTask(void *argument)
 /* USER CODE END Header_StartFlashYellowLedTask */
 void StartFlashYellowLedTask(void *argument)
 {
-	/* USER CODE BEGIN FlashYellowLedTask */
+  /* USER CODE BEGIN FlashYellowLedTask */
 	/* Infinite loop */
 	for (;;)
 	{
 		osDelay(1);
 	}
-	/* USER CODE END FlashYellowLedTask */
+  /* USER CODE END FlashYellowLedTask */
 }
 
 /* USER CODE BEGIN Header_StartFlashRedLedTask */
@@ -180,13 +182,13 @@ void StartFlashYellowLedTask(void *argument)
 /* USER CODE END Header_StartFlashRedLedTask */
 void StartFlashRedLedTask(void *argument)
 {
-	/* USER CODE BEGIN FlashRedLedTask */
+  /* USER CODE BEGIN FlashRedLedTask */
 	/* Infinite loop */
 	for (;;)
 	{
 		osDelay(1);
 	}
-	/* USER CODE END FlashRedLedTask */
+  /* USER CODE END FlashRedLedTask */
 }
 
 /* Private application code --------------------------------------------------*/
