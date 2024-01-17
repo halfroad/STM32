@@ -49,11 +49,9 @@
 /* USER CODE END Variables */
 /* Definitions for FlashYellowLedTask */
 osThreadId_t FlashYellowLedTaskHandle;
-const osThreadAttr_t FlashYellowLedTask_attributes = {
-  .name = "FlashYellowLedTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
-};
+const osThreadAttr_t FlashYellowLedTask_attributes =
+{ .name = "FlashYellowLedTask", .stack_size = 128 * 4, .priority =
+		(osPriority_t) osPriorityNormal, };
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -65,42 +63,44 @@ void StartFlashYellowLedTask(void *argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /**
-  * @brief  FreeRTOS initialization
-  * @param  None
-  * @retval None
-  */
-void MX_FREERTOS_Init(void) {
-  /* USER CODE BEGIN Init */
+ * @brief  FreeRTOS initialization
+ * @param  None
+ * @retval None
+ */
+void MX_FREERTOS_Init(void)
+{
+	/* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+	/* USER CODE END Init */
 
-  /* USER CODE BEGIN RTOS_MUTEX */
+	/* USER CODE BEGIN RTOS_MUTEX */
 	/* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
+	/* USER CODE END RTOS_MUTEX */
 
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
+	/* USER CODE BEGIN RTOS_SEMAPHORES */
 	/* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
+	/* USER CODE END RTOS_SEMAPHORES */
 
-  /* USER CODE BEGIN RTOS_TIMERS */
+	/* USER CODE BEGIN RTOS_TIMERS */
 	/* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
+	/* USER CODE END RTOS_TIMERS */
 
-  /* USER CODE BEGIN RTOS_QUEUES */
+	/* USER CODE BEGIN RTOS_QUEUES */
 	/* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
+	/* USER CODE END RTOS_QUEUES */
 
-  /* Create the thread(s) */
-  /* creation of FlashYellowLedTask */
-  FlashYellowLedTaskHandle = osThreadNew(StartFlashYellowLedTask, NULL, &FlashYellowLedTask_attributes);
+	/* Create the thread(s) */
+	/* creation of FlashYellowLedTask */
+	FlashYellowLedTaskHandle = osThreadNew(StartFlashYellowLedTask, NULL,
+			&FlashYellowLedTask_attributes);
 
-  /* USER CODE BEGIN RTOS_THREADS */
+	/* USER CODE BEGIN RTOS_THREADS */
 	/* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
+	/* USER CODE END RTOS_THREADS */
 
-  /* USER CODE BEGIN RTOS_EVENTS */
+	/* USER CODE BEGIN RTOS_EVENTS */
 	/* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
+	/* USER CODE END RTOS_EVENTS */
 
 }
 
@@ -113,7 +113,7 @@ void MX_FREERTOS_Init(void) {
 /* USER CODE END Header_StartFlashYellowLedTask */
 void StartFlashYellowLedTask(void *argument)
 {
-  /* USER CODE BEGIN StartFlashYellowLedTask */
+	/* USER CODE BEGIN StartFlashYellowLedTask */
 	/* Infinite loop */
 	for (;;)
 	{
@@ -121,7 +121,7 @@ void StartFlashYellowLedTask(void *argument)
 
 		osDelay(250);
 	}
-  /* USER CODE END StartFlashYellowLedTask */
+	/* USER CODE END StartFlashYellowLedTask */
 }
 
 /* Private application code --------------------------------------------------*/
